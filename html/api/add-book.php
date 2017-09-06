@@ -1,4 +1,9 @@
 <?php
+/*
+    Add Book
+    書籍追加
+    POST
+*/
 
 require_once(__DIR__.'/../../app/connect.php');
 require_once(__DIR__.'/../../app/Books.php');
@@ -12,11 +17,10 @@ $isbn    = $_POST['isbn'];
 $title   = $_POST['title'];
 $author  = $_POST['author'];
 $image   = $_POST['image'];
-$status  = $_POST['status'];
+$status  = 0;
 $cate    = $_POST['cate'];
-
 
 $book->addBookData($book_id, $isbn, $title, $author, $image, $status, $cate);
 
-header('Location: /../sample.html');
+//header('Location: /../new-book.php');
 ?>

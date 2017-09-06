@@ -1,14 +1,19 @@
 <?php
+/*
+    Add Cate
+    カテゴリ追加
+    POST
+*/
 
 require_once(__DIR__.'/../../app/connect.php');
-require_once(__DIR__.'/../../app/Books.php');
+require_once(__DIR__.'/../../app/Categories.php');
 $pdo = connect();
 
-$book = new Books($pdo, 'books');
+$cate = new Categories($pdo, 'categories');
 
 $cate_name = $_POST['cate_name'];
 
-$book->addCate($cate_name);
+$cate->addCate($cate_name);
 
-header('Location: /../sample.html');
+header('Location: /../new-cate.php');
 ?>
