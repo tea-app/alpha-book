@@ -20,3 +20,4 @@ $device = 1;
 $book->registLendBook($book_id, $user_id, $status, $device, $ip_address);
 
 $book->lendBook($book_id, $user_id);
+header('Location: /../single.php?book_id='.$book_id);

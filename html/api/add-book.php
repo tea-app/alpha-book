@@ -22,5 +22,5 @@ $cate    = $_POST['cate'];
 
 $book->addBookData($book_id, $isbn, $title, $author, $image, $status, $cate);
 
-//header('Location: /../new-book.php');
+header('Location: /../newbook.php');
 ?>
