@@ -203,3 +203,115 @@
     padding:5px;
     float: left;
 }
+
+.detail {
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+.bookImage {
+    float: left;
+    margin-right: 100px
+}
+
+.bookDetail {
+    float: left;
+    line-height: 50px;
+}
+
+.big {
+    font-size: 25px;
+}
+
+.bookDetail p {
+    font-size: 18px;
+}
+
+.history {
+    clear: both;
+    float: left;
+    margin-top: 40px;
+}
+
+.history-label {
+    font-size: 25px;
+}
+
+.history-list {
+    margin-top: 20px;
+}
+
+.history-l1 {
+    
+}
+
+.history-l2 {
+    
+}
+
+.history-l3 {
+    
+}
+
+.history-l4 {
+    
+}
+
+.history-l5 {
+    
+}
+
+.hl1 {
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    padding:5px;
+    float: left;
+    
+}
+
+.hl1-2 {
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.hl2 {
+     height: 25px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.hl2-1 {
+    height: 25px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.hl3 {
+     height: 25px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.hl3-1 {
+    height: 25px;
+    width: 250px;
+    border: 1px solid;
+    padding:5px;
+    float: left;
+}
