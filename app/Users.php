@@ -38,4 +38,33 @@ class Users
         var_dump($stmt->execute());
         var_dump($stmt->errorInfo() );
     }
+    
+    /**
+    * Get User Info
+    *
+    * @param int $user_id
+    *
+    * @return String $name
+    */
+    public function getUserInfo($user_id)
+    {
+        $stmt = $this->connect->prepare('SELECT * FROM users WHERE user_id = :user_id');
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch();
+        return $data;
+    }
+    
+    /**
+    * Get All User
+    *
+    * @return array
+    */
+    public function getAllUser()
+    {
+        $stmt = $this->connect->prepare('SELECT * FROM users');
+        $stmt->execute();
+        $users = $stmt->fetchAll();
+        return $users;
+    }
 }
