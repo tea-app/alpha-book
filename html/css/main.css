@@ -1,0 +1,205 @@
+.header {
+    background-color: #8d6e63;
+    height: 50px;
+}
+
+.logo {
+    float: left;
+    color: #fafafa;
+    font-size: 30px;
+    line-height: 50px;
+    margin-left: 30px;
+}
+
+.list li {
+    list-style: none;
+    float: left;
+    color: #fafafa;
+    font-size: 20px;
+    padding: 10px 25px;
+}
+
+.list {
+    float: right;
+    padding-right: 20px;
+}
+
+.label{
+    color: #8d6e63;
+    font-size: 25px;
+}
+
+.register-list {
+    padding-top: 10px;
+}
+
+.register-list input{
+     width: 250px;
+    height: 28px;
+    margin-top: 30px;
+    padding-left: 5px;
+}
+
+.register-botan {
+    margin-top: 30px;
+    margin-left: 168px
+}
+
+.register {
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
+.register-botan input {
+    width: 90px;
+    height: 27px;
+    color: #8d6e63;
+    background-color: #fff;
+    font-size: 15px;
+    border:1.5px solid #BCAAA4;
+    
+}
+
+.register-botan input:hover {
+    background-color: #D7CCC8;
+}
+
+.category {
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+.category-list input {
+    margin-top: 30px;
+    width: 250px;
+    height: 28px;
+    padding-left: 5px;
+}
+.category p {
+    font-size: 25px;
+    color: #8d6e63;
+}
+
+.category-list {
+    padding-top: 10px;
+}
+
+.category-botan input {
+    margin-top: 30px;
+    margin-left: 168px;
+}
+
+.category-botan input {
+    width: 90px;
+    height: 27px;
+    color: #8d6e63;
+    background-color: #fff;
+    font-size: 15px;
+    border: 1.5px solid #BCAAA4;
+}
+
+.category-botan input:hover {
+    background-color: #D7CCC8;
+}
+
+.MyPage-title {
+    font-size: 25px;
+    color: #8d6e63;
+}
+
+.MyPage {
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
+.display {
+    padding-top: 40px;
+}
+
+.rireki {
+    padding-top: 40px;
+    font-size: 20px;
+    color: #8d6e63;
+}
+
+.table {
+    padding-top: 25px;
+}
+
+.table-l1 {
+    float: left
+}
+
+.table-l2 {
+      float: left
+}
+
+.table-l3 {
+  float: left
+}
+
+.table-l4 {
+    float: left
+}
+
+.table-l5 {
+    float: left
+}
+
+.table-l6 {
+    float: left
+}
+
+.l1 {
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.l1-2 {
+    height: 70px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.l1-3 {
+    height: 25px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.l1-4 {
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.l1-5 {
+    height: 70px;
+    width: 250px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:5px;
+    float: left;
+}
+
+.l1-6 {
+    height: 25px;
+    width: 250px;
+    border: 1px solid;
+    padding:5px;
+    float: left;
+}
