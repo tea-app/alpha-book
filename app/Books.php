@@ -73,7 +73,7 @@ class Books
         $stmt->bindValue(':status', $status, PDO::PARAM_INT);
         $stmt->bindValue(':device', $device, PDO::PARAM_INT);
         $stmt->bindValue(':ip_address', $ip_address, PDO::PARAM_STR);
-        var_dump($stmt->execute());
+        $stmt->execute();
     }
     
     /**
@@ -101,9 +101,9 @@ class Books
     public function returnBook($book_id, $status)
     {
         $stmt = $this->connect->prepare('UPDATE books SET status = :status WHERE book_id = :book_id');
-        $stmt->bindParam(':status', $status, PDO::PARAM_INT);
         $stmt->bindParam(':book_id', $book_id, PDO::PARAM_INT);
-        $stmt->execute();
+        $stmt->bindParam(':status', $status, PDO::PARAM_INT);
+        var_dump($stmt->execute());
     }
     
     //========================================================
@@ -160,6 +160,42 @@ class Books
         $stmt->execute();
         $data = $stmt->fetch();
         return $data;
+    }
+    
+    /**
+    * Search Name Book
+    *
+    */
+    public function searchNameBook($title)
+    {
+        $stmt = $this->connect->prepare('SELECT * FROM books WHERE title LIKE :title');
+        $stmt->bindValue(':title', '%'.$title.'%', PDO::PARAM_STR);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        return $data;
+    }
+    
+    /**
+    * Search Cate Book
+    *
+    */
+    public function searchCateBook($cate_id)
+    {
+        
+    }
+    
+    
+    /**
+    * Get All Book Data
+    *
+    * @return array
+    */
+    public function getAllBook()
+    {
+        $stmt = $this->connect->prepare('SELECT * FROM books');
+        $stmt->execute();
+        $books = $stmt->fetchAll();
+        return $books;
     }
     
 }
