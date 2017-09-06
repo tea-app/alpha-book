@@ -16,10 +16,10 @@
                 <nav role="navigation" class="nav">
                     <ul class="nav-items">
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><span>Search</span></a>
+                            <a href="search.php" class="nav-link"><span>Search</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="search.php" class="nav-link"><span>Add</span></a>
+                            <a href="#" class="nav-link"><span>Add</span></a>
                             <nav class="submenu">
                                 <ul class="submenu-items">
                                     <li class="submenu-item"><a href="newbook.php" class="submenu-link">書籍</a></li>
