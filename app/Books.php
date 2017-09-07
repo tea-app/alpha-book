@@ -143,6 +143,21 @@ class Books
         return $data;
     }
     
+    /**
+    * Get History
+    *
+    */
+    public function getHistory()
+    {
+        $status = 1;
+        $stmt = $this->connect->prepare('SELECT * FROM lend WHERE status = :status LIMIT 10');
+        $stmt->bindParam(':status', $status, PDO::PARAM_INT);
+        $stmt->execute();
+        $histories = $stmt->fetchAll();
+        return $histories;
+    }
+    
+    
     
     //========================================================
     
