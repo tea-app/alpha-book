@@ -62,7 +62,7 @@
                     <form action="api/return-book.php" method="post">
                         <input type="hidden" name="user_id" value="<?php echo $data['status']; ?>">
                         <input type="hidden" name="book_id" value="<?php echo $data['book_id']; ?>">
-                        <input type="submit" value="返却">
+                        <input type="submit" value="返却する" class="return-button">
                     </form>
                     
                 </div>
@@ -84,7 +84,7 @@
                 <?php foreach ($histories as $history) : ?>
                 <tr>
                     <td><?php echo $history['regist_at']; ?></td>
-                    <td><?php echo getUserName($user, $history['user_id']); ?></td>
+                    <td><a href="my.php?user_id=<?php echo $history['user_id']; ?>"><?php echo getUserName($user, $history['user_id']); ?></a></td>
                     <td>
                         <?php if($history['status'] == 0) : ?>
                             <font color="red">返却</font>
