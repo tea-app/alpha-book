@@ -7,7 +7,12 @@
         <link rel="stylesheet" href="css/main.css">
 	</head>
     <body>
-        <?php require_once('api/get-categories.php'); ?>
+        <?php require_once('api/get-history-num.php'); ?>
+        <?php
+//        echo '<pre>';
+//        var_dump($histories);
+//        echo '</pre>';
+        ?>
         <header id="top-head">
             <div class="inner">
                 <div class="header_title">
@@ -36,27 +41,32 @@
             </div>
         </header>
         
-        <div id ="add-books" class="content">
-            <div class="add-books">
-                <h2>書籍追加</h2>
-                <form class="add-books-form" action="api/add-book.php" method="post">
-                    <input type="text" name="isbn" placeholder="ISBN" id="isbn">
-                    <button type="button" class="button search" id="search">Search</button>
-                    <input type="text" name="title" placeholder="タイトル" id="title">
-                    <input type="text" name="author" placeholder="著者" id="author">
-                    <input type="text" name="book_id" placeholder="BookID" id="book-id">
-                    <input type="text" name="image" placeholder="サムネイル" id="thumbnail">
-                    <select name="cate" palaceholder="カテゴリ" id="category">
-                        <option disabled selected>カテゴリ</option>
-                        <?php foreach ($category as $cate) : ?>
-                        <option value="<?php echo $cate['id']; ?>"><?php echo $cate['cate_name']; ?></option>
+        <div id="index">
+            <div class="table">
+                <div class="left">
+                    <div class="label">最近の貸出履歴</div>
+                    <div class="table">
+                        <div class="line">
+                            <div class="cell">日付</div>
+                            <div class="cell">ユーザ名</div>
+                            <div class="cell">本タイトル</div>
+                        </div>
+                        <?php foreach ($histories as $history) : ?>
+                        <div class="line">
+                            <div class="cell"><?php echo $history['regist_at']; ?></div>
+                            <div class="cell"><a href="my.php?user_id=<?php echo $history['user_id']; ?>"><?php echo getUserName($user, $history['user_id']) ?></a></div>
+                            <div class="cell"><a href="single.php?book_id=<?php echo $history['book_id']; ?>"><?php echo getBookName($book, $history['book_id']) ?></a></div>
+                        </div>
                         <?php endforeach; ?>
-                    </select>
-                    <button type="submit" class="button add">Add</button>
-                </form>
-                <div class="result-message"><font color="red"></font></div>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <div class="label">オススメの本</div>
+                </div>
             </div>
         </div>
+        
     </body>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/dropdown.js"></script>
@@ -70,18 +80,5 @@
             });
         });
     </script>
-    
-    
-    
-    <script type="text/javascript">
-        $.ajax({
-            type: "GET",
-            url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:4797311126',
-            dataType: 'json'
-        }).done(function (json){
-            window.console.log(json.items[0].volumeInfo);
-        });
-    </script>
-    
     
 </html>

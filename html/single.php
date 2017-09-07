@@ -11,7 +11,7 @@
         <header id="top-head">
             <div class="inner">
                 <div class="header_title">
-                    <h1>alpha-book</h1>
+                    <h1><a href="index.php">alpha-book</a></h1>
                 </div>
                 <nav role="navigation" class="nav">
                     <ul class="nav-items">
@@ -58,19 +58,13 @@
                 <!-- 返却処理 -->
                 <div class="lend-button">
                     <?php echo getUserName($user, $data['status']); ?> <font color="red">さんが貸出中です</font><br>
-                    
                     <form action="api/return-book.php" method="post">
                         <input type="hidden" name="user_id" value="<?php echo $data['status']; ?>">
                         <input type="hidden" name="book_id" value="<?php echo $data['book_id']; ?>">
                         <input type="submit" value="返却する" class="return-button">
                     </form>
-                    
                 </div>
             <?php endif; ?>
-            
-            
-            
-            
         </div>
         
         <div class="table">

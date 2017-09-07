@@ -11,7 +11,7 @@
         <header id="top-head">
             <div class="inner">
                 <div class="header_title">
-                    <h1>alpha-book</h1>
+                    <h1><a href="index.php">alpha-book</a></h1>
                 </div>
                 <nav role="navigation" class="nav">
                     <ul class="nav-items">
