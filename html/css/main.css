@@ -584,3 +584,23 @@ select {
     width: 33%;
 /*    background-color: aqua;*/
 }
+
+
+#index .table .right .book-table{
+    width: 100%;
+    padding: 5px;
+    display: table;
+/*    background-color: red;*/
+}
+#index .table .right .book-table .book-cell{
+    float: left;
+    width: calc(50% - 10px);
+    padding: 5px;
+}
+#index .table .right .book-table .book-cell img{
+    width: 100%;
+}
+#index .table .right .book-table .none{
+    clear: both;
+}
+

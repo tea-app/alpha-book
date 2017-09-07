@@ -15,6 +15,10 @@ function getBookName($book, $book_id){
     $data = $book->searchBookData($book_id);
     return $data['title'];
 }
+function getBookImage($book, $book_id){
+    $data = $book->searchBookData($book_id);
+    return $data['image'];
+}
 function getUserName($user, $user_id){
     $data = $user->getUserInfo($user_id);
     return $data['name'];

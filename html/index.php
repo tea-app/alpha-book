@@ -63,6 +63,16 @@
                 
                 <div class="right">
                     <div class="label">オススメの本</div>
+                    
+                    <div class="book-table">
+                        <?php foreach ($histories as $history) : ?>
+                        <div class="book-cell">
+                            <a href="single.php?book_id=<?php echo $history['book_id']; ?>"><img src="<?php echo getBookImage($book, $history['book_id']); ?>"></a>
+                        </div>
+                        <?php endforeach; ?>
+                        <div class="none"></div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
