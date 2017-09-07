@@ -47,13 +47,14 @@
                 <tr>
                     <td>タイトル</td>
                     <td>著者</td>
-                    <td>Book ID</td>
+                    <td>カテゴリ</td>
                 </tr>
                 <?php foreach ($books as $data) : ?>
                 <tr>
                     <td><a href="single.php?book_id=<?php echo $data['book_id']; ?>"><?php echo $data['title']; ?></a></td>
                     <td><?php echo $data['author']; ?></td>
-                    <td><?php echo $data['book_id']; ?></td>
+                    <td><?php echo getCateName($cate, $data['book_id']); ?></td>
+
                 </tr>
                 <?php endforeach; ?>
             </table>
