@@ -70,7 +70,7 @@
                             <a href="single.php?book_id=<?php echo $history['book_id']; ?>"><img src="<?php echo getBookImage($book, $history['book_id']); ?>"></a>
                         </div>
                         <?php endforeach; ?>
-                        <div class="none"></div>
+<!--                        <div class="none"></div>-->
                     </div>
                     
                 </div>

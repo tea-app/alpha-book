@@ -551,28 +551,23 @@ select {
     display: table-cell;
     width: 66%;
     padding: 10px;
-/*    background-color: aqua;*/
 }
 #index .table .center{
     display: table-cell;
     width: 33%;
     padding: 10px;
-/*    background-color: yellow;*/
 }
 #index .table .right{
     display: table-cell;
     width: 34%;
     padding: 10px;
-/*    background-color: red;*/
 }
 
 #index .table * .table{
     width: 100%;
-/*    background-color: aqua;*/
 }
 #index .table * .table .line{
     width: 100%;
-/*    background-color: aqua;*/
     display: table;
     border-bottom: 1px solid #adadad;
     line-height: 30px;
@@ -582,7 +577,6 @@ select {
     padding-left: 4px;
     display: table-cell;
     width: 33%;
-/*    background-color: aqua;*/
 }
 
 
@@ -595,7 +589,7 @@ select {
 #index .table .right .book-table .book-cell{
     float: left;
     width: calc(50% - 10px);
-    padding: 5px;
+    padding: 3px;
 }
 #index .table .right .book-table .book-cell img{
     width: 100%;
