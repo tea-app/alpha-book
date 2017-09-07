@@ -46,6 +46,7 @@
             <div class="book-id">Book ID　<?php echo $data['book_id']; ?></div>
             
             <?php if($data['status'] == 0) : ?>
+                <!-- 貸出処理 -->
                 <div class="lend-button">
                     <form action="api/lend-book.php" method="post">
                         <input type="text" name="user_id" placeholder="User ID">
@@ -54,6 +55,7 @@
                     </form>
                 </div>
             <?php else : ?>
+                <!-- 返却処理 -->
                 <div class="lend-button">
                     <?php echo getUserName($user, $data['status']); ?> <font color="red">さんが貸出中です</font><br>
                     

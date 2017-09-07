@@ -15,5 +15,10 @@ $user = new Users($pdo, 'users');
 $user_id = $_POST['user_id'];
 $name = $_POST['name'];
 
-$user->addUser($user_id, $name);
+if($user_id == null || $name == null){
+    //
+} else{
+    $user->addUser($user_id, $name);
+}
+
 header('Location: /../new-user.php');
