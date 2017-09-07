@@ -517,3 +517,17 @@ select {
     border: 1px solid #8D6E63;
     cursor: pointer;
 }
+
+.lend-button .return-button {
+    margin-top: 20px;
+    height: 35px;
+    width: 200px;
+    font-size: 16px;
+    color: #8D6E63;
+    background-color: #FFFFFF;
+    border: 1px solid #8D6E63;
+    cursor: pointer;
+}
+.lend-button .return-button:hover{
+    background-color: #D7CCC8;
+}
