@@ -181,7 +181,11 @@ class Books
     */
     public function searchCateBook($cate_id)
     {
-        
+        $stmt = $this->connect->prepare('SELECT * FROM books WHERE cate LIKE :cate');
+        $stmt->bindValue(':cate', $cate_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $book = $stmt->fetch();
+        return $book;
     }
     
     

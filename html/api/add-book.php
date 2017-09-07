@@ -19,8 +19,12 @@ $author  = $_POST['author'];
 $image   = $_POST['image'];
 $status  = 0;
 $cate    = $_POST['cate'];
+if($cate == null){
+    //
+}else{
+    $book->addBookData($book_id, $isbn, $title, $author, $image, $status, $cate);
+}
 
-$book->addBookData($book_id, $isbn, $title, $author, $image, $status, $cate);
 
 header('Location: /../newbook.php');
 ?>
